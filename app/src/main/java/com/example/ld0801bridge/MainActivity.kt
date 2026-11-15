@@ -60,7 +60,7 @@ class MainActivity : Activity() {
     private fun buildUi(): LinearLayout {
         val root = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
-            setPadding(24, 55, 24, 24)
+            setPadding(24, 155, 24, 24)
         }
 
         val title = TextView(this).apply {
@@ -114,6 +114,15 @@ Local endpoint:
 http://127.0.0.1:9101/print
 
 Keep this app open while functioning.
+
+
+
+
+
+
+
+
+
 
 
 
