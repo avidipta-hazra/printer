@@ -64,7 +64,7 @@ class MainActivity : Activity() {
         }
 
         val title = TextView(this).apply {
-            text = "LD0801 Native Label Bridge"
+            text = "Printer Bridge by A Hazra"
             textSize = 22f
             setPadding(0, 0, 0, 20)
         }
@@ -105,17 +105,23 @@ class MainActivity : Activity() {
 
         val info = TextView(this).apply {
             text = """
-This app replaces Cleanter for LD0801 label printing.
 
 Printer protocol:
-DeTong native raster
 50 × 30 mm label
 400 × 240 dots at 203 DPI
 
 Local endpoint:
 http://127.0.0.1:9101/print
 
-Keep this app open while using the WordPress attendance page.
+Keep this app open while functioning.
+
+
+
+
+
+
+
+App is developed by Dr. Avidipta Hazra
 """.trimIndent()
             textSize = 14f
             setPadding(0, 30, 0, 0)
