@@ -60,7 +60,7 @@ class MainActivity : Activity() {
     private fun buildUi(): LinearLayout {
         val root = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
-            setPadding(24, 24, 24, 24)
+            setPadding(24, 55, 24, 24)
         }
 
         val title = TextView(this).apply {
@@ -103,8 +103,8 @@ class MainActivity : Activity() {
         }
         root.addView(serverButton)
 
-        val info = TextView(this).apply {
-            text = """
+val info = TextView(this).apply {
+    val textContent = """
 
 Printer protocol:
 50 × 30 mm label
@@ -123,10 +123,23 @@ Keep this app open while functioning.
 
 App is developed by Dr. Avidipta Hazra
 """.trimIndent()
-            textSize = 14f
-            setPadding(0, 30, 0, 0)
-        }
-        root.addView(info)
+
+    val spannable = android.text.SpannableString(textContent)
+    val developerText = "App is developed by Dr. Avidipta Hazra"
+    val start = textContent.indexOf(developerText)
+
+    spannable.setSpan(
+        android.text.style.StyleSpan(android.graphics.Typeface.BOLD),
+        start,
+        start + developerText.length,
+        android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+    )
+
+    text = spannable
+    textSize = 14f
+    setPadding(0, 30, 0, 0)
+}
+root.addView(info)
 
         return root
     }
