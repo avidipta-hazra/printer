@@ -9,7 +9,7 @@
 
     <application
         android:allowBackup="false"
-        android:label="LD0801 Native Bridge"
+        android:label="AH Print"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
